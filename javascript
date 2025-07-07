@@ -1,8 +1,21 @@
-document.querySelectorAll('.color-btn').forEach(button => {
-    const color = button.getAttribute('data-color');
-    button.style.backgroundColor = color.toLowerCase();
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
 
-    button.addEventListener('click', () => {
-        document.body.style.backgroundColor = color.toLowerCase();
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) {
+            slide.classList.add("active");
+        }
     });
-});
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
