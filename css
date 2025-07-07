@@ -1,33 +1,23 @@
-body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <img src="./images/pngtree-beautiful-black-horses-pictures-best-of-free-hd-wallpapers-horse-images-image_2951847.jpg" class="slide active">
+            <img src="./images/photo-1553284965-83fd3e82fa5a.jpg" class="slide">
+            <img src="./images/Most Expensive Horses Ever Sold-jpg-1.jpeg" class="slide">
+            <img src="./images/majestic-herd-of-horses-galloping-across-golden-field-at-sunset-dramatic-landscape-free-photo.jpeg" class="slide">
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-}
-
-.color-btn {
-    padding: 15px 25px;
-    border: none;
-    border-radius: 8px;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.color-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+    <script src="script.js"></script>
+</body>
+</html>
